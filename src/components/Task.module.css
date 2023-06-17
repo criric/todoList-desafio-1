@@ -1,0 +1,101 @@
+.taskContainer{
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: var(--gray-100);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskContainer > p{
+  max-width: 632px;
+  width: 100%;
+}
+
+.newCheckbox{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.newCheckbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: transparent;
+  border: 1px solid var(--light-blue);
+  border-radius: 50%;
+}
+
+.newCheckbox:hover input ~ .checkbox {
+  background-color: transparent;
+}
+
+/* When the checkbox is checked, add a blue background */
+.newCheckbox input:checked ~ .checkbox {
+  background-color: var(--dark-purple);
+  border: 1px solid var(--dark-purple);
+}
+
+/* Create the checkbox/indicator (hidden when not checked) */
+.checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkbox when checked */
+.newCheckbox input:checked ~ .checkbox:after {
+  display: block;
+}
+
+/* Style the checkbox/indicator */
+.newCheckbox .checkbox:after {
+  left: 6px;
+  top: 3px;
+  width: 2px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.taskContainer input{
+  background-color: var(--gray-500);
+}
+
+.taskContainer button{
+  color: var(--gray-300);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.taskContainer button:focus{
+  color: var(--danger);
+  box-shadow: none;
+  background: var(--gray-400)
+}

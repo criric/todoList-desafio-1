@@ -1,0 +1,40 @@
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 46rem;
+  margin: -28px auto;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem
+}
+
+.container input{
+  background: var(--gray-500);
+  padding: 16px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--gray-700);
+  color: var(--gray-200);
+}
+
+.container button{
+  background: var(--dark-blue);
+  border: none;
+  border-radius: 8px;
+  color: var(--gray-100);
+  width: 5.625rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s; 
+}
+
+.container button:hover{
+  background: var(--light-blue);
+}

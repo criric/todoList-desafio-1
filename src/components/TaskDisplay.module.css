@@ -1,0 +1,42 @@
+.container{
+  margin-top: 4rem;
+}
+.taskCount{
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.createdTaskCount{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.createdTaskCount > p {
+  color: var(--light-blue)
+}
+
+.completedTaskCount{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.completedTaskCount > p {
+  color: var(--light-purple)
+}
+
+.counter{
+  background: var(--gray-400);
+  color: var(--gray-200);
+  font-size: 0.75rem;
+  border-radius: 999px;
+  padding: 0.125rem 0.5rem;
+}
+
+.allTasks{
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
